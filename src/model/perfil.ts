@@ -1,4 +1,4 @@
-import { Poblacion } from './poblacion';
+import { Poblacion  } from './poblacion';
 
 export class Perfil {
     public nickname: string;
