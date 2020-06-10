@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 //IMPORTAMOS LOS COMPONENTES NECESARIOS 
 import { ListapoblacionComponent } from '../components/listapoblacion/listapoblacion.component';
 import { AltausuarioComponent } from '../components/altausuario/altausuario.component';
+import { ListacontactoComponent } from '../components/listacontacto/listacontacto.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     
+    ListacontactoComponent,
     ListapoblacionComponent,
     AltausuarioComponent
   ],
