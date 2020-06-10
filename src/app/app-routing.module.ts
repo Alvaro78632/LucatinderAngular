@@ -1,14 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ListacontactoComponent } from '../components/listacontacto/listacontacto.component';
-
-
-const routes: Routes = [
-  { 
-    path: 'contactos', 
-    component: ListacontactoComponent 
-  }
+import { ListacontactoComponent } from '../components/listacontacto/listacontacto.component'
   
 import { ListapoblacionComponent} from '../components/listapoblacion/listapoblacion.component';
 
@@ -16,6 +9,9 @@ import { ListapoblacionComponent} from '../components/listapoblacion/listapoblac
 const routes: Routes = [
   { path: 'listapoblacion',
     component: ListapoblacionComponent
+  },
+  {path: 'listacontacto', 
+  component: ListacontactoComponent 
   }
 ];
 
