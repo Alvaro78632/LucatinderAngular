@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 
 //Hola (Miguel)
 //HOLA SERGIO
+//Hola Nino
 @NgModule({
   declarations: [
     AppComponent
