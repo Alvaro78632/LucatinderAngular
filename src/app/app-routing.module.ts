@@ -1,7 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-//IMPORTACIONES NUESTRAS
+import { ListacontactoComponent } from '../components/listacontacto/listacontacto.component';
+
+
+const routes: Routes = [
+  { 
+    path: 'contactos', 
+    component: ListacontactoComponent 
+  }
+  
 import { ListapoblacionComponent} from '../components/listapoblacion/listapoblacion.component';
 
 
