@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lucatinder"
+    }
+  },
+  "defaultProject": "lucatinder",
+  "cli": {
+    "analytics": "9504430e-7b60-4952-8427-10c83a092651"
+  }
 }
