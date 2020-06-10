@@ -1,7 +1,7 @@
 import { Poblacion } from './poblacion';
 
 export class Perfil {
-    public nickName: string;
+    public nickname: string;
     public edad: number;
     public genero: string;
     public foto: string;

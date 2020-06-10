@@ -1,4 +1,4 @@
 export class Poblacion {
-    public idPoblacion: number;
-    public nombrePoblacion: string;
+    public idpoblacion: number;
+    public nombrepoblacion: string;
 }
