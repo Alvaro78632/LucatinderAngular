@@ -10,6 +10,13 @@ const routes: Routes = [
     component: ListacontactoComponent 
   }
   
+import { ListapoblacionComponent} from '../components/listapoblacion/listapoblacion.component';
+
+
+const routes: Routes = [
+  { path: 'listapoblacion',
+    component: ListapoblacionComponent
+  }
 ];
 
 @NgModule({
