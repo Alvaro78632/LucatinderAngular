@@ -1,0 +1,121 @@
+package com.example.proyecto2.controller;
+
+//import java.util.ArrayList;
+//import java.util.List;
+
+import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+//import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.proyecto2.service.*;
+import com.example.proyecto2.model.Perfil;
+import com.example.proyecto2.model.Poblacion;
+
+/**
+ * @author Sergio
+ * @version 02/06/2020
+ *
+ */
+
+@Controller
+public class UseController {
+
+	@Autowired
+	PoblacionService PoblacionService;
+	@Autowired
+	PerfilService PerfilService;
+	// @Autowired
+	// GeneradorPerfiles Perfilutil;
+
+	@GetMapping("/")
+	public String login(ModelMap model) throws Exception {
+		model.addAttribute("perfil", new Perfil());
+		// model.addAttribute("poblacion",new Poblacion());
+		return "login";
+	}
+
+	@PostMapping("/")
+	public ModelAndView saveLogin(@Valid Perfil perfil, BindingResult result, ModelAndView model) {
+		
+		if (result.hasErrors()) {
+			System.out.println("--- Hay algunos errores");
+			model.setViewName("login");
+			
+		}
+
+		if (PerfilService.isPerfil(perfil.getNickName(), perfil.getPassword())) {
+			model.addObject("perfil", perfil);
+			System.out.println("--- entro");
+			model.addObject("listaDesconocido", PerfilService.listaPerfilDesconocido(perfil));
+			model.setViewName("redirect:/bienvenida");
+			return model;
+		} else if (!PerfilService.isPerfil(perfil.getNickName(), perfil.getPassword())) {
+
+			model.addObject("warning", perfil.getNickName() + " No existe en la base de datos.");
+			System.out.println("--- entro");
+
+		}
+		model.setViewName("login");
+		return model;
+	}
+
+	@GetMapping("/altaPerfil")
+	public String registroPerfil(ModelMap model) throws Exception {
+		model.addAttribute("perfil", new Perfil());
+		model.addAttribute("poblacion", new Poblacion());
+		model.addAttribute("ListaPoblacion", PoblacionService.findAll());
+		return "altaPerfil";
+	}
+
+	@PostMapping("/altaPerfil")
+	public String saveRegistration(@ModelAttribute Perfil perfil, BindingResult result, ModelMap model) {
+		model.addAttribute("ListaPoblacion", PoblacionService.findAll());
+		if (result.hasErrors()) {
+			System.out.println("--- Hay algunos errores");
+			return "altaPerfil";
+		}
+		if (!PerfilService.existe(perfil.getNickName())) {
+			PerfilService.add(perfil);
+			model.addAttribute("success",
+					"Estimado " + perfil.getNickName() + " , su registro se ha completado de forma correcta");
+			return "bienvenida";
+		} else {
+			model.addAttribute("warning",
+					perfil.getNickName() + " Ya existe en la base de datos.");
+			System.out.println("--- entro");
+			return "altaPerfil";
+		}
+	}
+
+	@PostMapping("/bienvenida")
+	public ModelAndView  bienvenida(@ModelAttribute ("perfil") Perfil perfil, ModelAndView model) throws Exception {
+		System.out.println("--- Controller > Bienvenida POST " + perfil);	
+		model.addObject("perfil", perfil);
+		model.addObject("listaDesconocido", PerfilService.listaPerfilDesconocido(perfil));
+		model.setViewName("bienvenida");
+		return model;
+	}
+	
+
+	
+	@GetMapping("/bienvenida")
+	public ModelAndView like(ModelAndView model,@RequestParam("nickname1") String nickname1,@RequestParam("nickname2") String nickname2) {
+		System.out.println("--- Controller > Bienvenida POST");
+		//LLAMAR A UN SERVICIO QUE  AÑADA a LA TABRA LIKE el LIKE
+		
+		Perfil perfil= new Perfil();
+		//perfil=PerfilService.findById(Nickname1);
+		//model.addObject("perfil", perfil);
+		//model.addObject("listaDesconocido", PerfilService.listaPerfilDesconocido(perfil));
+		model.setViewName("bienvenida");
+		return model;
+	}
+}

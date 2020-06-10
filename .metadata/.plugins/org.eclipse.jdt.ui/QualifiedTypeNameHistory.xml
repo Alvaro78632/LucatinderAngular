@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+<fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.DAO.PerfilDAO"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+<fullyQualifiedTypeName name="com.github.javafaker.Faker"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.model.Poblacion"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.util.GeneradorPerfiles"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.LazyCollection"/>
+<fullyQualifiedTypeName name="org.hibernate.annotations.LazyCollectionOption"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+<fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.model.Contacto"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.service.PoblacionService"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.service.ContactoService"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.service.DescarteService"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.service.PerfilService"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.example.proyecto2.model.Perfil"/>
+<fullyQualifiedTypeName name="org.aspectj.lang.annotation.Before"/>
+</qualifiedTypeNameHistroy>
