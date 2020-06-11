@@ -11,12 +11,13 @@ const httpOptions = {
 })
 export class PoblacionService {
 
+  poblaciones : Poblacion[];
   constructor(private http:HttpClient) { }
 
   //Crear el servicio REST que responda a esta peticion
-  private userUrl = 'http://localhost:8080/PONER RUTA';
+  //private userUrl = 'http://localhost:8080/PONER RUTA';
 
   public getPoblaciones() {
-      return this.http.get<Poblacion[]>(this.userUrl);
+      return this.http.get<Poblacion[]>('http://localhost:8080/poblacion/listado');
     }
 }

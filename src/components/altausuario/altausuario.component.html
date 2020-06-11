@@ -1,1 +1,60 @@
-<p>altausuario works!</p>
+
+<h2 class="text-center">Bienvenidos a <span class="text-primary">Luca</span><span class="text-danger">Tinder</span></h2>
+<br>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="border border-danger rounded p-3">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>NickName (*)</label>
+          <input type="text" class="form-control" [(ngModel)]="perfil.nickName" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Password (*)</label>
+          <input type="password" class="form-control" [(ngModel)]="perfil.password" required>                     
+        </div>
+      </div>   
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Edad (*)</label>
+          <input type="number" class="form-control" placeholder="23" min="18" [(ngModel)]="perfil.edad" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Poblacion (*)</label>
+         
+          <select class="form-control" [(ngModel)]="perfil.poblacion.idPoblacion">
+            <option *ngFor="let poblacion of listaPoblacion" value="{{poblacion.idPoblacion}}">
+           {{poblacion.nombrePoblacion}}
+            </option>
+          </select>
+
+        </div>
+      </div>                    
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>Genero (*)</label>
+          <div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" value="Hombre" name="genero" [(ngModel)]="perfil.genero" required>
+              <label class="form-check-label">Hombre</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" value="Mujer" name="genero" [(ngModel)]="perfil.genero">
+              <label class="form-check-label">Mujer</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Breve descripcion</label>
+          <textarea class="form-control" [(ngModel)]="perfil.descripcion"></textarea>
+        </div>
+      </div>
+      <div class="row justify-content-md-center">
+        <div>
+          <button (click)="Addperfil()">Alta</button>  
+        </div>
+      </div>      
+    </div>			
+  </div>
+</div>
+

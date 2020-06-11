@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListacontactoComponent } from '../components/listacontacto/listacontacto.component'
   
 import { ListapoblacionComponent} from '../components/listapoblacion/listapoblacion.component';
+import { AltausuarioComponent } from '../components/altausuario/altausuario.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,9 @@ const routes: Routes = [
   },
   {path: 'listacontacto', 
   component: ListacontactoComponent 
+  },
+  {path: 'addPerfil', 
+  component: AltausuarioComponent
   }
 ];
 
