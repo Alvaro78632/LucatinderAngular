@@ -1,9 +1,12 @@
 
 <h2 class="text-center">Bienvenidos a <span class="text-primary">Luca</span><span class="text-danger">Tinder</span></h2>
 <br>
+
 <div class="container">
-  <div class="row justify-content-md-center">
-    <div class="border border-danger rounded p-3">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h5 class="card-header border border-danger rounded-top bg-danger text-white text-center">Registro</h5>
+    <div class="border border-danger rounded-bottom p-3">
       <div class="form-row">
         <div class="form-group col-md-6">
           <label>NickName (*)</label>
@@ -51,10 +54,11 @@
       </div>
       <div class="row justify-content-md-center">
         <div>
-          <button (click)="Addperfil()">Alta</button>  
+          <input class="btn btn-outline-success" type="submit" value="Alta" (click)="Addperfil()">
         </div>
       </div>      
-    </div>			
+    </div>
+    </div>
   </div>
 </div>
 

@@ -5,6 +5,7 @@ import { ListacontactoComponent } from '../components/listacontacto/listacontact
   
 import { ListapoblacionComponent} from '../components/listapoblacion/listapoblacion.component';
 import { AltausuarioComponent } from '../components/altausuario/altausuario.component';
+import { LoginComponent } from '../components/login/login.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {path: 'addPerfil', 
   component: AltausuarioComponent
+  },
+  {path: 'login', 
+  component: LoginComponent
   }
 ];
 
