@@ -9,19 +9,19 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label>NickName</label>
-                        <input type="text" class="form-control" placeholder="Pepe97" required>
+                        <input type="text" #nickName class="form-control" placeholder="Pepe97" required>
                     </div>
                     <div class="form-group col-md-6">
                         <label>Password</label>
-                        <input type="password" class="form-control" placeholder="Password" required>
+                        <input type="password" #password class="form-control" placeholder="Password" required>
                     </div>
                </div>
               
                <!-- BOTONES -->
-               <div class="row justify-content-md-center">
+               <div class="row justify-content-center">
                     <div>
-                        <!-- <input class="btn btn-outline-danger" type="submit" value="Login"> -->
-                        <button type="submit" class="btn btn-outline-success">Acceder</button> 
+                        <button type="submit" (click)="logIn(nickName.value, password.value, $event)" class="btn btn-outline-primary">Acceder</button> 
+                        <button type="submit" (click)="logOut($event)" class="btn btn-outline-danger">Cerrar Sesion</button> 
                     </div>
                </div>
             </div>
