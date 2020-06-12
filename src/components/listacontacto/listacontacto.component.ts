@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Router } from '@angular/router';
 
-import { Contacto } from '../../model/contacto';
+import { Perfil } from '../../model/perfil';
 import { ContactoService } from '../../service/contacto.service';
 
 @Component({
@@ -12,14 +12,14 @@ import { ContactoService } from '../../service/contacto.service';
 })
 export class ListacontactoComponent implements OnInit {
 
-  contactos: Contacto[];
+  listacontacto: Perfil[];
 
   constructor(private router: Router, private contactoService: ContactoService) { }
 
   ngOnInit(): void {
     this.contactoService.getContacto()
       .subscribe(data => {
-        this.contactos = data;
+        this.listacontacto = data;
       });
   };
 }
