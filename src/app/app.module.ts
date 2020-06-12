@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+
 
 //IMPORTAMOS LOS COMPONENTES NECESARIOS 
 
@@ -11,8 +13,8 @@ import { AltausuarioComponent } from '../components/altausuario/altausuario.comp
 import { ListacontactoComponent } from '../components/listacontacto/listacontacto.component';
 import { PerfilService } from '../service/perfil.service';
 import { PoblacionService } from '../service/poblacion.service'; 
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from '../service/login.service';
+import { LoginComponent } from '../components/login/login.component';
 
 
 @NgModule({
@@ -21,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     
     ListacontactoComponent,
     ListapoblacionComponent,
-    AltausuarioComponent
+    AltausuarioComponent,
+    LoginComponent
   ],
   imports: [  
     BrowserModule,
@@ -29,7 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [PerfilService,PoblacionService],
+  providers: [PerfilService,PoblacionService,LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
