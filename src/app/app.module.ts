@@ -10,6 +10,7 @@ import { ListapoblacionComponent } from '../components/listapoblacion/listapobla
 import { AltausuarioComponent } from '../components/altausuario/altausuario.component';
 import { ListacontactoComponent } from '../components/listacontacto/listacontacto.component';
 import { PerfilService } from '../service/perfil.service';
+import { ContactoService } from '../service/contacto.service';
 import { PoblacionService } from '../service/poblacion.service'; 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [PerfilService,PoblacionService],
+  providers: [PerfilService,PoblacionService, ContactoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
