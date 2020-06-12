@@ -1,2 +1,16 @@
-<div class="col-md-6">
-    <h2> Contacto funciona</h2>
+<!--<div class="col-md-6">
+    <h2> lista de contactos funciona</h2>
+    <select class="form-control" [(ngModel)]="perfil.nickName">
+        <option *ngFor="let perfil of listacontacto" value="{{perfil.nickName}}">
+       {{perfil.nickName}}
+        </option>
+      </select>-->
+
+      <h2> lista de contactos funciona</h2>
+      <table>
+        <tr *ngFor="let perfil of listacontacto">
+          <td>
+                  {{perfil}}
+        </td>
+          </tr>
+      </table>
