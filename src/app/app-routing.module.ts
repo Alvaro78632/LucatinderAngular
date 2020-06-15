@@ -8,6 +8,7 @@ import { AltausuarioComponent } from './components/altausuario/altausuario.compo
 import { LoginComponent } from './components/login/login.component';
 import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ListadesconocidoComponent} from './components/listadesconocido/listadesconocido.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,9 @@ const routes: Routes = [
   },
   {path: 'listacontacto', 
   component: ListacontactoComponent 
+  },
+  {path: 'listadesconocido', 
+  component: ListadesconocidoComponent 
   },
   {path: 'addPerfil', 
   component: AltausuarioComponent

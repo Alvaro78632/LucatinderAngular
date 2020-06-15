@@ -14,6 +14,8 @@ export class PerfilService {
 
   public isPerfilLoggedIn:boolean;
   public perfilLogged:Perfil;
+  perfiles: Perfil[];
+  perfil2:Perfil;
 
   constructor(private http:HttpClient) { 
     this.isPerfilLoggedIn = false; 
@@ -59,5 +61,10 @@ export class PerfilService {
       foto:null
     };
     return perfil;
+  }
+
+  public getListaDesconocido(){
+    this.perfil2=JSON.parse(localStorage.getItem('perfilLoggeado'));
+    return this.http.get<Perfil[]>('http://localhost:8080/perfil/listadesconocido/'+this.perfil2.nickName);
   }
 }
