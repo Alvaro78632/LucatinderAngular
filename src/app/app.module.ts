@@ -17,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ContactoService} from "./service/contacto.service";
+import { ListadesconocidoComponent } from './components/listadesconocido/listadesconocido.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContactoService} from "./service/contacto.service";
     AltausuarioComponent,
     MenuComponent,
     LoginComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    ListadesconocidoComponent
   ],
   imports: [  
     BrowserModule,
