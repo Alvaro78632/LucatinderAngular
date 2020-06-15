@@ -28,7 +28,6 @@ export class AltausuarioComponent implements OnInit {
   
   Addperfil():void{
     console.log("linea 30 componente altausuario" + this.perfil);
-
     this.perfilService.addPerfil(this.perfil)
     .subscribe(data => {
       console.log("Todo OK");

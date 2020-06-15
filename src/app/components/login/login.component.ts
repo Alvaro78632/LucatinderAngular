@@ -33,15 +33,15 @@ export class LoginComponent implements OnInit {
           let u: Perfil = this.perfilService.emptyPerfil(); //GENERAR PERFIL VACIO
           u.nickName = nickName;                            //LE PONEMOS EL NICKNAME
           this.perfilService.setPerfilLoggedIn(u);          //ADD PERFIL AL LOCALSTORAGE
+          //ENTRARA A BIENVENIDA
+          this.router.navigateByUrl('/bienvenida');
         }else{
           alert("La contraseña no es correcta");
         }
       },
       error => {
         console.error(error);
-      },
-      //Lo usaremos para recargar la página
-      () => this.navigate()
+      }
     );
   }
 
@@ -49,14 +49,14 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     this.perfilService.destroyPerfilLogged();
     console.log("--- LoginComponent > logOut >>>> saliendo");
-    this.navigate();
+    this.router.navigateByUrl('/');
   }
-
+  /*
   navigate() {
     console.log("--- LoginComponent > navigate >>>> recargando página");
     //this.router.navigateByUrl('/home');
     //No es muy elegante porque recarga la pagina.. no la modifica
     window.location.href="http://localhost:4200/addPerfil";
   }
-
+*/
 }

@@ -21,9 +21,10 @@
                <div class="row justify-content-center">
                     <div>
                         <button type="submit" (click)="logIn(nickName.value, password.value, $event)" class="btn btn-outline-primary">Acceder</button> 
-                        <button type="submit" (click)="logOut($event)" class="btn btn-outline-danger">Cerrar Sesion</button> 
+                        <button type="submit" disabled (click)="logOut($event)" class="btn btn-outline-danger">Cerrar Sesion</button> 
                     </div>
                </div>
+               <a class="text-center" routerLink="addPerfil">¿No tienes cuenta guapo/a? </a>
             </div>
         </div>			
     </div>
