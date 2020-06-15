@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ListacontactoComponent } from '../components/listacontacto/listacontacto.component'
+import { ListacontactoComponent } from './components/listacontacto/listacontacto.component'
   
-import { ListapoblacionComponent} from '../components/listapoblacion/listapoblacion.component';
-import { AltausuarioComponent } from '../components/altausuario/altausuario.component';
-import { LoginComponent } from '../components/login/login.component';
+import { ListapoblacionComponent} from './components/listapoblacion/listapoblacion.component';
+import { AltausuarioComponent } from './components/altausuario/altausuario.component';
+import { LoginComponent } from './components/login/login.component';
+import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 const routes: Routes = [
@@ -20,7 +22,16 @@ const routes: Routes = [
   },
   {path: 'login', 
   component: LoginComponent
-  }
+  },
+  {path: '', 
+  component: LoginComponent
+  },
+  {path: 'bienvenida', 
+  component: BienvenidaComponent,
+  children: [
+    { path: '', component: MenuComponent, pathMatch: 'full'},
+  ]
+  },
 ];
 
 @NgModule({
