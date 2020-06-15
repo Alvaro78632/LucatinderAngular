@@ -45,12 +45,7 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  logOut(event: Event) {
-    event.preventDefault();
-    this.perfilService.destroyPerfilLogged();
-    console.log("--- LoginComponent > logOut >>>> saliendo");
-    this.router.navigateByUrl('/');
-  }
+ 
   /*
   navigate() {
     console.log("--- LoginComponent > navigate >>>> recargando página");
