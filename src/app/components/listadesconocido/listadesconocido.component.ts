@@ -25,10 +25,12 @@ export class ListadesconocidoComponent implements OnInit {
     });
   }
 
-  public darLike(nickname:string, event: Event){
-    console.log(nickname);
-
-    this.contactoService.darlike(nickname);
+  public darLike(nickname:string, event: Event):void{
+    this.contactoService.darlike(nickname)
+    .subscribe(data => {
+      console.log(data);
+      window.location.reload();
+    });
 
   }
 
