@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 
 
 //IMPORTAMOS LOS COMPONENTES NECESARIOS 
-
 import { ListapoblacionComponent } from './components/listapoblacion/listapoblacion.component';
 import { AltausuarioComponent } from './components/altausuario/altausuario.component';
 import { ListacontactoComponent } from './components/listacontacto/listacontacto.component';
@@ -17,7 +16,7 @@ import { LoginService } from './service/login.service';
 import { LoginComponent } from './components/login/login.component';
 import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
 import { MenuComponent } from './components/menu/menu.component';
-
+import { ContactoService} from "./service/contacto.service";
 
 @NgModule({
   declarations: [
@@ -36,7 +35,7 @@ import { MenuComponent } from './components/menu/menu.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [PerfilService,PoblacionService,LoginService],
-  bootstrap: [AppComponent]
+  providers: [PerfilService,PoblacionService,LoginService,ContactoService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
