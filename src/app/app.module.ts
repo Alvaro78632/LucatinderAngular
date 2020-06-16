@@ -18,6 +18,8 @@ import { BienvenidaComponent } from './components/bienvenida/bienvenida.componen
 import { MenuComponent } from './components/menu/menu.component';
 import { ContactoService} from "./service/contacto.service";
 import { ListadesconocidoComponent } from './components/listadesconocido/listadesconocido.component';
+import { ListadescarteComponent } from './components/listadescarte/listadescarte.component';
+import { DescarteService } from './service/descarte.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { ListadesconocidoComponent } from './components/listadesconocido/listade
     MenuComponent,
     LoginComponent,
     BienvenidaComponent,
-    ListadesconocidoComponent
+    ListadesconocidoComponent,
+    ListadescarteComponent
   ],
   imports: [  
     BrowserModule,
@@ -37,7 +40,7 @@ import { ListadesconocidoComponent } from './components/listadesconocido/listade
     FormsModule,
     HttpClientModule
   ],
-  providers: [PerfilService,PoblacionService,LoginService,ContactoService],
+  providers: [PerfilService,PoblacionService,LoginService,ContactoService,DescarteService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
