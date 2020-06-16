@@ -2,14 +2,15 @@
 <div class="row justify-content-center">
     <div class="card-group">
         <div class="card border border-danger rounded" style="max-width:250px" *ngFor="let perfil of listaDesconocido">
-            <img *ngIf="perfil.genero=='Hombre'" class="card-img-top p-2" src="https://loremflickr.com/300/300/boy" alt="Card image cap">
-            <img *ngIf="perfil.genero=='Mujer'" class="card-img-top p-2" src="https://loremflickr.com/300/300/girl" alt="Card image cap">
+            <img *ngIf="perfil.genero=='Hombre'" class="card-img-top p-2" src="https://loremflickr.com/300/300/men"
+             alt="Card image cap">
+            <img *ngIf="perfil.genero=='Mujer'" class="card-img-top p-2" src="https://loremflickr.com/300/300/women" alt="Card image cap">
             <div class="card-body">
                 <div class="card-title">
-                    <span class="h5">{{perfil.nickName}}</span>
-                    <span class="h5 text-muted" >{{perfil.poblacion.nombrePoblacion}}</span>
+                    <span class="h5">{{perfil.nickName}}</span><br>
+                    <span class="h5 text-muted">{{perfil.poblacion.nombrePoblacion}}</span>
                 </div>
-                <p class="card-text"><span class="text-primary"> {{perfil.genero}} </span><span  >{{perfil.edad}} </span></p>
+                <p class="card-text"><span class="text-primary">{{perfil.genero}} </span><span>{{perfil.edad}}</span></p>
                 <p class="card-text" *ngIf="perfil.descripcion!=null">{{perfil.descripcion}}</p>
                 <div class="row justify-content-around">
                     <a class="btn btn-outline-success"  role="button" (click)="darLike(perfil.nickName, $event)">LIKE</a>
