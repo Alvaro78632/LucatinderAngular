@@ -16,6 +16,7 @@ export class ListadescarteComponent implements OnInit {
   ngOnInit(): void {
     this.descarteService.getDescarte()
     .subscribe(data => {
+      console.log(data);
       this.listadescarte = data;
     });
   }

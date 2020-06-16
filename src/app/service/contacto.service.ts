@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Perfil} from '../model/perfil';
-import { Observable } from 'rxjs';
+
 import { Contacto } from '../model/contacto';
 
 const httpOptions = {
@@ -28,9 +28,9 @@ export class ContactoService {
 
     public darlike(nickname:string){
       this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
-      let contacto: Contacto;
+      
 
-      contacto = {
+      this.contacto = {
           nickname1: {
                     nickName:this.perfil.nickName ,
                     password: '',
@@ -56,8 +56,8 @@ export class ContactoService {
                     foto:null
             }
         };
-        console.log(contacto);
-        return this.http.post<Contacto>('http://localhost:8080/like',contacto);
+        console.log(this.contacto);
+        return this.http.post<Contacto>('http://localhost:8080/like',this.contacto);
     }
 
     
