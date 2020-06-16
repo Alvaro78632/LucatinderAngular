@@ -26,9 +26,8 @@ export class DescarteService {
 
   public darDislike(nickname:string){
     this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
-    let descarte: Descarte;
 
-    descarte = {
+    this.descarte = {
         nickname1: {
                   nickName:this.perfil.nickName ,
                   password: '',
@@ -54,8 +53,8 @@ export class DescarteService {
                   foto:null
           }
       };
-      console.log(descarte);
-      return this.http.post<Descarte>('http://localhost:8080/Dislike',Descarte);
+      console.log(this.descarte);
+      return this.http.post<Descarte>('http://localhost:8080/Dislike',this.descarte);
   }
 
 }
