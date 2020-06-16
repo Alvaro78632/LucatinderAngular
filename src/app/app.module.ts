@@ -20,6 +20,7 @@ import { ContactoService} from "./service/contacto.service";
 import { ListadesconocidoComponent } from './components/listadesconocido/listadesconocido.component';
 import { ListadescarteComponent } from './components/listadescarte/listadescarte.component';
 import { DescarteService } from './service/descarte.service';
+import { ListamatchComponent } from './components/listamatch/listamatch.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DescarteService } from './service/descarte.service';
     LoginComponent,
     BienvenidaComponent,
     ListadesconocidoComponent,
-    ListadescarteComponent
+    ListadescarteComponent,
+    ListamatchComponent
   ],
   imports: [  
     BrowserModule,
