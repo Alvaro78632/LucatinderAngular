@@ -13,12 +13,12 @@ const httpOptions = {
   })
 export class ContactoService {
 
-    listacontacto: Perfil[];
+    //listacontacto: Perfil[];
     perfil:Perfil;
     contacto: Contacto;
+    listamatch: Contacto[];
     constructor(private http:HttpClient) {}
 
-    
 
     public getContacto() {
       this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
@@ -60,5 +60,10 @@ export class ContactoService {
         return this.http.post<Contacto>('http://localhost:8080/like',this.contacto);
     }
 
+    public getMatch() {
+      this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
+      console.log(this.perfil);
+        return this.http.get<Contacto[]>('http://localhost:8080/perfil/match/'+this.perfil.nickName);
+      }
     
 }

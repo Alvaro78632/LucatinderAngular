@@ -10,7 +10,7 @@ import { BienvenidaComponent } from './components/bienvenida/bienvenida.componen
 import { MenuComponent } from './components/menu/menu.component';
 import { ListadesconocidoComponent} from './components/listadesconocido/listadesconocido.component';
 import { ListadescarteComponent} from './components/listadescarte/listadescarte.component';
-
+import { ListamatchComponent} from './components/listamatch/listamatch.component';
 const routes: Routes = [
   { path: 'listapoblacion',
     component: ListapoblacionComponent
@@ -39,6 +39,9 @@ const routes: Routes = [
     { path: '', component: MenuComponent, pathMatch: 'full'},
   ]
   },
+  {path: 'listamatch', 
+  component: ListamatchComponent
+  }
 ];
 
 @NgModule({
