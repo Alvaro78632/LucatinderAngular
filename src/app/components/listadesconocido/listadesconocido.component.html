@@ -13,7 +13,7 @@
                 <p class="card-text" *ngIf="perfil.descripcion!=null">{{perfil.descripcion}}</p>
                 <div class="row justify-content-around">
                     <a class="btn btn-outline-success"  role="button" (click)="darLike(perfil.nickName, $event)">LIKE</a>
-                    <a class="btn btn-outline-danger"  role="button">DISLIKE</a>
+                    <a class="btn btn-outline-danger"  role="button" (click)="darDislike(perfil.nickName, $event)">DISLIKE</a>
                 </div>
             </div>
         </div>

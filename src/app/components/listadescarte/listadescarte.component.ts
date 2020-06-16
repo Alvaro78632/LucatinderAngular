@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Perfil } from '../../model/perfil';
+import { DescarteService } from '../../service/descarte.service';
+@Component({
+  selector: 'app-listadescarte',
+  templateUrl: './listadescarte.component.html',
+  styleUrls: ['./listadescarte.component.css']
+})
+export class ListadescarteComponent implements OnInit {
+
+  listadescarte: Perfil[];
+
+  constructor(private router: Router, private descarteService: DescarteService) { }
+
+  ngOnInit(): void {
+    this.descarteService.getDescarte()
+    .subscribe(data => {
+      this.listadescarte = data;
+    });
+  }
+
+}

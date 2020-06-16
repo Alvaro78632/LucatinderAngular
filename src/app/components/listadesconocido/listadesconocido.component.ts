@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import {Perfil} from '../../model/perfil';
 import {PerfilService} from '../../service/perfil.service';
 import {ContactoService} from '../../service/contacto.service'
+import { DescarteService } from 'src/app/service/descarte.service';
 
 @Component({
   selector: 'app-listadesconocido',
@@ -15,7 +16,7 @@ export class ListadesconocidoComponent implements OnInit {
   listaDesconocido: Perfil[];
   
 
-  constructor(private router: Router, private perfilService: PerfilService, private contactoService: ContactoService ) { }
+  constructor(private router: Router, private perfilService: PerfilService, private contactoService: ContactoService, private descarteService: DescarteService) { }
 
   ngOnInit(): void {
     this.perfilService.getListaDesconocido()
@@ -34,4 +35,12 @@ export class ListadesconocidoComponent implements OnInit {
 
   }
 
+  public darDislike(nickname:string, event: Event):void{
+    this.descarteService.darDislike(nickname)
+    .subscribe(data => {
+      console.log(data);
+      window.location.reload();
+    });
+
+  }
 }

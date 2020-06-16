@@ -9,7 +9,7 @@ import { LoginComponent } from './components/login/login.component';
 import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ListadesconocidoComponent} from './components/listadesconocido/listadesconocido.component';
-
+import { ListadescarteComponent} from './components/listadescarte/listadescarte.component';
 
 const routes: Routes = [
   { path: 'listapoblacion',
@@ -17,6 +17,9 @@ const routes: Routes = [
   },
   {path: 'listacontacto', 
   component: ListacontactoComponent 
+  },
+  {path: 'listadescarte', 
+  component: ListadescarteComponent 
   },
   {path: 'listadesconocido', 
   component: ListadesconocidoComponent 
