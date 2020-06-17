@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Perfil } from '../../model/perfil';
 import { PerfilService} from '../../service/perfil.service';
 import { Router } from '@angular/router';
 
@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
+
+  listaDesconocidosGenero: Perfil[];
 
   constructor( 
     private router: Router,
@@ -24,5 +26,7 @@ export class MenuComponent implements OnInit {
     alert("Se ha cerrado la session");
     this.router.navigateByUrl('/');
   }
+  
+
 
 }
