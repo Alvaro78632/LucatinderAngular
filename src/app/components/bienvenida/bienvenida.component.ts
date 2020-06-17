@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-bienvenida',
@@ -10,6 +11,9 @@ export class BienvenidaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem("perfilLoggeado")){
+      alert("¡Tu, fuera, no te cueles lechon!")
+      window.location.href="/";
+    }
   }
-
 }

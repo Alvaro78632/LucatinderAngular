@@ -21,6 +21,7 @@ import { ListadesconocidoComponent } from './components/listadesconocido/listade
 import { ListadescarteComponent } from './components/listadescarte/listadescarte.component';
 import { DescarteService } from './service/descarte.service';
 import { ListamatchComponent } from './components/listamatch/listamatch.component';
+import { FormulariobusquedaComponent } from './components/formulariobusqueda/formulariobusqueda.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ListamatchComponent } from './components/listamatch/listamatch.componen
     BienvenidaComponent,
     ListadesconocidoComponent,
     ListadescarteComponent,
-    ListamatchComponent
+    ListamatchComponent,
+    FormulariobusquedaComponent
   ],
   imports: [  
     BrowserModule,

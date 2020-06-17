@@ -67,4 +67,8 @@ export class PerfilService {
     this.perfil2=JSON.parse(localStorage.getItem('perfilLoggeado'));
     return this.http.get<Perfil[]>('http://localhost:8080/perfil/listadesconocido/'+this.perfil2.nickName);
   }
+
+  public getListaDesconocidoGenero(perfil: Perfil){
+    return this.http.post<Perfil[]>('http://localhost:8080/perfil/listadesconocidoGenero/', perfil);
+  }
 }

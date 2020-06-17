@@ -17,6 +17,10 @@ export class MenuComponent implements OnInit {
     private perfilService: PerfilService) { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem("perfilLoggeado")){
+      alert("¡Tu, fuera, no te cueles lechon!")
+      window.location.href="/";
+    }
   }
 
   logOut(event: Event) {

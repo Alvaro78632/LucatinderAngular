@@ -17,6 +17,11 @@ export class ListacontactoComponent implements OnInit {
   constructor(private router: Router, private contactoService: ContactoService) { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem("perfilLoggeado")){
+      alert("¡Tu, fuera, no te cueles lechon!")
+      window.location.href="/";
+    }
+
     this.contactoService.getContacto()
       .subscribe(data => {
         this.listacontacto = data;
