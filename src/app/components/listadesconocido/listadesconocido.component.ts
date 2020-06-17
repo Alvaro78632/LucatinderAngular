@@ -19,6 +19,11 @@ export class ListadesconocidoComponent implements OnInit {
   constructor(private router: Router, private perfilService: PerfilService, private contactoService: ContactoService, private descarteService: DescarteService) { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem("perfilLoggeado")){
+      alert("¡Tu, fuera, no te cueles lechon!")
+      window.location.href="/";
+    }
+
     this.perfilService.getListaDesconocido()
     .subscribe(data => {
       console.log(data);

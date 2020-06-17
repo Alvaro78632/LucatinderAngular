@@ -18,6 +18,11 @@ export class AltausuarioComponent implements OnInit {
     private router: Router,private poblacionService:PoblacionService) { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem("perfilLoggeado")){
+      alert("¡Tu, fuera, no te cueles lechon!")
+      window.location.href="/";
+    }
+
     this.perfil = this.perfilService.emptyPerfil();
     this.poblacionService.getPoblaciones()
     .subscribe(data => {

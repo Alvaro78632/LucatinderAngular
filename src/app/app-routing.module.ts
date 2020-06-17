@@ -11,6 +11,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ListadesconocidoComponent} from './components/listadesconocido/listadesconocido.component';
 import { ListadescarteComponent} from './components/listadescarte/listadescarte.component';
 import { ListamatchComponent} from './components/listamatch/listamatch.component';
+import { FormulariobusquedaComponent } from './components/formulariobusqueda/formulariobusqueda.component';
+
 const routes: Routes = [
   { path: 'listapoblacion',
     component: ListapoblacionComponent
@@ -41,6 +43,9 @@ const routes: Routes = [
   },
   {path: 'listamatch', 
   component: ListamatchComponent
+  },
+  {path: 'formulariobusqueda', 
+  component: FormulariobusquedaComponent
   }
 ];
 

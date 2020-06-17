@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
 
   //Al arrancar compruebo si ya hay perfil almacenado
   ngOnInit(): void {
+    
   }
   //Tener en cuenta la passwor (usarla en el futuro)
   logIn(nickName: string, password: string, event: Event) {

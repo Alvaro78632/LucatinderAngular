@@ -1,12 +1,13 @@
 <app-menu></app-menu>
-<div class="row justify-content-center mt-5">
+<div class="mt-4">
     <table class="table w-50 table-dark"> <!-- separarar de la tabla y el menu -->
-        <thead class="text-danger">
+        <tr><th colspan="5" class="text-center text-primary h4">Lista Like</th></tr>
+        <tr class="text-danger">
             <th>Nombre </th>
             <th> Edad </th>
             <th> Genero </th>
             <th> Poblacion</th>
-        </thead>
+        </tr>
         <tr *ngFor="let perfil of listacontacto">
             <td>
                 {{perfil.nickName}}

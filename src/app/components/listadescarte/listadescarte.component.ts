@@ -14,6 +14,11 @@ export class ListadescarteComponent implements OnInit {
   constructor(private router: Router, private descarteService: DescarteService) { }
 
   ngOnInit(): void {
+    if (!localStorage.getItem("perfilLoggeado")){
+      alert("¡Tu, fuera, no te cueles lechon!")
+      window.location.href="/";
+    }
+
     this.descarteService.getDescarte()
     .subscribe(data => {
       console.log(data);
