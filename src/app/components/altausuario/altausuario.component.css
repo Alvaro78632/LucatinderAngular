@@ -1,0 +1,11 @@
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background-image: url("https://statics-cuidateplus.marca.com/sites/default/files/styles/natural/public/pareja_playa.jpg?itok=XYZw7RIA");
+    background-size: cover;
+    min-height: 100vh;
+}

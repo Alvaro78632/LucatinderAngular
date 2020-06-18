@@ -1,5 +1,17 @@
-body{
-    background-image: url(https://www.teleadhesivo.com/es/img/asfs1130-jpg/folder/products-listado-merchanthover/pegatinas-coches-motos-corazon-geometrico.jpg);
-    background-attachment: fixed;
+
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background-image: url("https://static.diariofemenino.com/uploads/psicologia/sonarcupido2.jpg");
     background-size: cover;
+    min-height: 100vh;
+}
+
+.transparente{
+    background-color: rgba(255, 255, 255);
+    color: black;
 }

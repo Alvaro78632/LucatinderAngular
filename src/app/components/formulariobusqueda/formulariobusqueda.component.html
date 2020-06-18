@@ -1,0 +1,47 @@
+<div class="header">
+    <app-menu></app-menu>  
+    <div class="centrado">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <h5 class="card-header border border-danger rounded-top bg-danger text-white text-center">Busca Gente</h5>
+                    <div class="border border-danger rounded-bottom p-3 bg-white">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label>Genero</label>
+                                <div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="Hombre" name="genero" [(ngModel)]="perfil.genero" required>
+                                    <label class="form-check-label">Hombre</label>
+                                    </div>
+                                    <div class="form-check">
+                                    <input class="form-check-input" type="radio" value="Mujer" name="genero" [(ngModel)]="perfil.genero">
+                                    <label class="form-check-label">Mujer</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" value="Todo" name="genero" [(ngModel)]="perfil.genero">
+                                        <label class="form-check-label">Todo</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Poblacion</label>
+                                <select class="form-control" [(ngModel)]="perfil.poblacion.idPoblacion">
+                                    <option *ngFor="let poblacion of listaPoblacion" value="{{poblacion.idPoblacion}}">
+                                        {{poblacion.nombrePoblacion}}
+                                    </option>
+                                </select>
+                            </div>
+                    </div>
+                    
+                    <div class="row justify-content-center">
+                            <div>
+                                <button type="submit" (click)="buscarDesconocidos()" class="btn btn-outline-primary">Buscar</button> 
+                            </div>
+                    </div>
+                    </div>
+                </div>			
+            </div>
+        </div>
+    </div>
+</div>

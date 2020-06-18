@@ -1,25 +1,29 @@
-<app-menu></app-menu>
-<div class="row justify-content-center mt-5">
-    <table class="table w-50 table-dark"> <!-- separarar de la tabla y el menu -->
-        <thead class="text-danger">
-            <th>Nombre </th>
-            <th> Edad </th>
-            <th> Genero </th>
-            <th> Poblacion</th>
-        </thead>
-        <tr *ngFor="let perfil of listacontacto">
-            <td>
-                {{perfil.nickName}}
-            </td>
-            <td>
-                {{perfil.edad}}
-            </td>
-            <td>
-                {{perfil.genero}}
-            </td>
-            <td>
-                {{perfil.poblacion.nombrePoblacion}}
-            </td>
-        </tr>
-    </table>
+<div class="header">
+    <app-menu></app-menu>
+    <br><br>
+    <div class="centrado mt-4">
+        <table class="transparente table w-50 table-dark"> <!-- separarar de la tabla y el menu -->
+            <tr><th colspan="5" class="text-center text-primary h4">Lista Like</th></tr>
+            <tr class="text-danger">
+                <th>Nombre </th>
+                <th> Edad </th>
+                <th> Genero </th>
+                <th> Poblacion</th>
+            </tr>
+            <tr *ngFor="let perfil of listacontacto">
+                <td>
+                    {{perfil.nickName}}
+                </td>
+                <td>
+                    {{perfil.edad}}
+                </td>
+                <td>
+                    {{perfil.genero}}
+                </td>
+                <td>
+                    {{perfil.poblacion.nombrePoblacion}}
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>

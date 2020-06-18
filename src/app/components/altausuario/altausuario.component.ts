@@ -16,7 +16,7 @@ export class AltausuarioComponent implements OnInit {
 
   constructor(private perfilService: PerfilService,
     private router: Router,private poblacionService:PoblacionService) { }
-
+  //GENERAMOS UN PERFIL VACIO Y PEDIMOS LA LISTA DE POBLACIONES
   ngOnInit(): void {
     this.perfil = this.perfilService.emptyPerfil();
     this.poblacionService.getPoblaciones()
@@ -25,11 +25,13 @@ export class AltausuarioComponent implements OnInit {
       this.listaPoblacion=data;
     });
   }
-  
+  //METODO QUE LE PASA AL SERVICIO PERFIL UN PERFIL PARA QUE LO INSERTE EN LA BBDD
   Addperfil():void{
     console.log("linea 30 componente altausuario" + this.perfil);
     this.perfilService.addPerfil(this.perfil)
     .subscribe(data => {
+      alert("Cuenta creada con exito");
+      this.router.navigateByUrl('/');
       console.log("Todo OK");
     });
     this.perfil = this.perfilService.emptyPerfil();

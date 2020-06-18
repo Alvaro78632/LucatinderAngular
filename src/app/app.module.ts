@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 
 
 //IMPORTAMOS LOS COMPONENTES NECESARIOS 
-import { ListapoblacionComponent } from './components/listapoblacion/listapoblacion.component';
 import { AltausuarioComponent } from './components/altausuario/altausuario.component';
 import { ListacontactoComponent } from './components/listacontacto/listacontacto.component';
 import { PerfilService } from './service/perfil.service';
@@ -21,20 +20,21 @@ import { ListadesconocidoComponent } from './components/listadesconocido/listade
 import { ListadescarteComponent } from './components/listadescarte/listadescarte.component';
 import { DescarteService } from './service/descarte.service';
 import { ListamatchComponent } from './components/listamatch/listamatch.component';
+import { FormulariobusquedaComponent } from './components/formulariobusqueda/formulariobusqueda.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     
     ListacontactoComponent,
-    ListapoblacionComponent,
     AltausuarioComponent,
     MenuComponent,
     LoginComponent,
     BienvenidaComponent,
     ListadesconocidoComponent,
     ListadescarteComponent,
-    ListamatchComponent
+    ListamatchComponent,
+    FormulariobusquedaComponent
   ],
   imports: [  
     BrowserModule,
