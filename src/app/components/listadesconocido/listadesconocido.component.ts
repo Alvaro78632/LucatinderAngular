@@ -40,6 +40,7 @@ export class ListadesconocidoComponent implements OnInit {
     .subscribe(data => {
       console.log(data);
       window.location.reload();
+    
     });
 
   }

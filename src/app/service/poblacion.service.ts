@@ -14,9 +14,7 @@ export class PoblacionService {
   poblaciones : Poblacion[];
   constructor(private http:HttpClient) { }
 
-  //Crear el servicio REST que responda a esta peticion
-  //private userUrl = 'http://localhost:8080/PONER RUTA';
-
+  //Metodo que obtiene una lista con las poblaciones disponibles de la aplicacion
   public getPoblaciones() {
       return this.http.get<Poblacion[]>('http://localhost:8080/poblacion/listado');
     }

@@ -18,12 +18,15 @@ export class DescarteService {
 
   constructor(private http:HttpClient) { }
 
+  //Metodo que obtiene la lista de descartes del perfil loggeado
   public getDescarte() {
     this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
     console.log(this.perfil);
       return this.http.get<Perfil[]>('http://localhost:8080/descarte/listadescarte/'+this.perfil.nickName);
     }
 
+    //Este metodo recibe un perfil que ha recibido dislike del perfil loggeado y
+    // permite acceder a la funcion "dislike" del controlador REST
   public darDislike(nickname:string){
     this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
 

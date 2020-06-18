@@ -20,12 +20,15 @@ export class ContactoService {
     constructor(private http:HttpClient) {}
 
 
+    //Este metodo permite obtener la lista de contactos del perfil loggeado
     public getContacto() {
       this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
       console.log(this.perfil);
         return this.http.get<Perfil[]>('http://localhost:8080/contacto/listacontacto/'+this.perfil.nickName);
       }
 
+      //Este metodo recibe un perfil que ha recibido like del perfil loggeado y
+      // permite acceder a la funcion "like" del controlador REST
     public darlike(nickname:string){
       this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
       
@@ -60,6 +63,7 @@ export class ContactoService {
         return this.http.post<Contacto>('http://localhost:8080/like',this.contacto);
     }
 
+    //Este metodo permite obtener la lista de matches del perfil loggeado
     public getMatch() {
       this.perfil=JSON.parse(localStorage.getItem("perfilLoggeado"));
       console.log(this.perfil);
