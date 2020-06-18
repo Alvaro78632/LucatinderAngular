@@ -8,6 +8,8 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
+
+  //Metodo que permite loggearse al perfil en caso de que exista en la base de datos
   login(nickName:string) {
     return this.http.get<Perfil>( "http://localhost:8080/perfil/"+nickName);     
   }
