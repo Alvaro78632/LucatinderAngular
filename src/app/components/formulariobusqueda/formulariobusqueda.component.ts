@@ -35,6 +35,7 @@ export class FormulariobusquedaComponent implements OnInit {
     this.poblacionService.getPoblaciones()
     .subscribe(data => {
       console.log(data);
+      
       this.listaPoblacion=data;
     });
   }

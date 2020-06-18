@@ -18,11 +18,6 @@ export class AltausuarioComponent implements OnInit {
     private router: Router,private poblacionService:PoblacionService) { }
 
   ngOnInit(): void {
-    if (!localStorage.getItem("perfilLoggeado")){
-      alert("¡Tu, fuera, no te cueles lechon!")
-      window.location.href="/";
-    }
-
     this.perfil = this.perfilService.emptyPerfil();
     this.poblacionService.getPoblaciones()
     .subscribe(data => {
@@ -35,6 +30,8 @@ export class AltausuarioComponent implements OnInit {
     console.log("linea 30 componente altausuario" + this.perfil);
     this.perfilService.addPerfil(this.perfil)
     .subscribe(data => {
+      alert("Cuenta creada con exito");
+      this.router.navigateByUrl('/');
       console.log("Todo OK");
     });
     this.perfil = this.perfilService.emptyPerfil();
