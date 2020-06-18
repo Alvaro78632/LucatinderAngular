@@ -6,6 +6,8 @@ import { Poblacion} from '../../model/poblacion';
 import { Perfil} from '../../model/perfil';
 import { PerfilService} from '../../service/perfil.service';
 
+//ESTE COMPONENTE ESTA EN DESARROLLO
+//PERMITIRA FILTRAR LAS BUSQUEDAS DE PERFILES POR POBLACION Y GENERO
 
 @Component({
   selector: 'app-formulariobusqueda',
@@ -26,11 +28,13 @@ export class FormulariobusquedaComponent implements OnInit {
       private perfilService: PerfilService) { }
 
   ngOnInit(): void {
+    //COMPRUEBA EN EL LOCAL STORAGE QUE EXISTE EL PERFIL ESTA LOGEADO, SINO ES REDIRIGIDO AL LOGIN
     if (!localStorage.getItem("perfilLoggeado")){
       alert("¡Tu, fuera, no te cueles lechon!")
       window.location.href="/";
     }
 
+    //GENERA UN PERFIL VACIO Y PIE LA LISTA DE LAS POBLACIONES AL SERVICIO POBLACION SERVICE
     this.perfil = this.perfilService.emptyPerfil();
     this.poblacionService.getPoblaciones()
     .subscribe(data => {

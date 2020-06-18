@@ -14,11 +14,13 @@ export class ListadescarteComponent implements OnInit {
   constructor(private router: Router, private descarteService: DescarteService) { }
 
   ngOnInit(): void {
+    //COMPRUEBA EN EL LOCAL STORAGE QUE EXISTE EL PERFIL ESTA LOGEADO, SINO ES REDIRIGIDO AL LOGIN
     if (!localStorage.getItem("perfilLoggeado")){
       alert("¡Tu, fuera, no te cueles lechon!")
       window.location.href="/";
     }
 
+    //PIDE AL SERVICIO DESCARTE LA LISTA DE DESCARTES
     this.descarteService.getDescarte()
     .subscribe(data => {
       console.log(data);

@@ -17,11 +17,13 @@ export class ListacontactoComponent implements OnInit {
   constructor(private router: Router, private contactoService: ContactoService) { }
 
   ngOnInit(): void {
+    //COMPRUEBA EN EL LOCAL STORAGE QUE EXISTE EL PERFIL ESTA LOGEADO, SINO ES REDIRIGIDO AL LOGIN
     if (!localStorage.getItem("perfilLoggeado")){
       alert("¡Tu, fuera, no te cueles lechon!")
       window.location.href="/";
     }
 
+    //PIDE AL SERVICIO CONTACTO LA LISTA DE CONTACTOS
     this.contactoService.getContacto()
       .subscribe(data => {
         this.listacontacto = data;

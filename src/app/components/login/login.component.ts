@@ -18,24 +18,24 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private perfilService: PerfilService) { }
 
-  //Al arrancar compruebo si ya hay perfil almacenado
-  ngOnInit(): void {
-    
-  }
-  //Tener en cuenta la passwor (usarla en el futuro)
+  ngOnInit(): void { }
+  
+  //METODO QUE LOGEA AL UN PERFIL
   logIn(nickName: string, password: string, event: Event) {
     event.preventDefault(); 
     
+    //PIDE LOS DATOS DEL PERFIL PASANDO EL NICKNAME
     this.loginService.login(nickName).subscribe(
       res => {
         console.log("--- LoginComponent > ngOnInit > getUserLoggedIn: ¿Hay usuario?");
         console.log(res);
+        //SI LA PASSWORD COINCIDE SE CREA LA SESION Y SE LE REDIRIGE A BIENVENIDA
         if (res.password == password) {
           let u: Perfil = this.perfilService.emptyPerfil(); //GENERAR PERFIL VACIO
           u.nickName = nickName;                            //LE PONEMOS EL NICKNAME
           this.perfilService.setPerfilLoggedIn(u);          //ADD PERFIL AL LOCALSTORAGE
-          //ENTRARA A BIENVENIDA
           this.router.navigateByUrl('/bienvenida');
+        //SI NO COINCIDE LA PASSWORD SE LE MOSTRARA EL SIGUIENTE MENSAJE
         }else{
           alert("La contraseña no es correcta");
         }

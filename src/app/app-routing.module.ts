@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { ListacontactoComponent } from './components/listacontacto/listacontacto.component'
   
-import { ListapoblacionComponent} from './components/listapoblacion/listapoblacion.component';
 import { AltausuarioComponent } from './components/altausuario/altausuario.component';
 import { LoginComponent } from './components/login/login.component';
 import { BienvenidaComponent } from './components/bienvenida/bienvenida.component';
@@ -14,9 +13,6 @@ import { ListamatchComponent} from './components/listamatch/listamatch.component
 import { FormulariobusquedaComponent } from './components/formulariobusqueda/formulariobusqueda.component';
 
 const routes: Routes = [
-  { path: 'listapoblacion',
-    component: ListapoblacionComponent
-  },
   {path: 'listacontacto', 
   component: ListacontactoComponent 
   },
