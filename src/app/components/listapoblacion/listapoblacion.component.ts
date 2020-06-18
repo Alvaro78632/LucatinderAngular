@@ -17,7 +17,7 @@ export class ListapoblacionComponent implements OnInit {
 
   ngOnInit(): void {
     this.poblacionService.getPoblaciones()
-    .subscribe(data => {
+    .subscribe(data => {   
       this.listaPoblacion=data;
     });
   };

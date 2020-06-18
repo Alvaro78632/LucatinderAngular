@@ -15,6 +15,12 @@ export class ListamatchComponent implements OnInit {
   listamatch:Contacto[];
   
   ngOnInit(): void {
+    if (!localStorage.getItem("perfilLoggeado")){
+      alert("¡Tu, fuera, no te cueles lechon!")
+      window.location.href="/";
+    }
+
+
     this.contactoService.getMatch()
     .subscribe(data => {
       console.log(data);

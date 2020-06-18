@@ -2,15 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /*
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(50%,-50%);*/
 }
 
 .header{
-    background-image: url("https://image.freepik.com/foto-gratis/fondo-negro-vacio-luz-iluminada-ademas_93675-45849.jpg");
+    background-image: url("https://statics-cuidateplus.marca.com/sites/default/files/styles/natural/public/pareja_playa.jpg?itok=XYZw7RIA");
     background-size: cover;
     min-height: 100vh;
 }

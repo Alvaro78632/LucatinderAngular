@@ -1,0 +1,11 @@
+.centrado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    background-image: url("https://us.emedemujer.com/wp-content/uploads/sites/3/2017/10/conejitas-Playboy-hefner.jpg");
+    background-size: cover;
+    min-height: 100vh;
+}
