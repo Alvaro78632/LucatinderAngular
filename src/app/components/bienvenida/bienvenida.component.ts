@@ -11,7 +11,8 @@ export class BienvenidaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if (!localStorage.getItem("perfilLoggeado")){
+      //COMPRUEBA EN EL LOCAL STORAGE QUE EXISTE EL PERFIL ESTA LOGEADO, SINO ES REDIRIGIDO AL LOGIN
+      if (!localStorage.getItem("perfilLoggeado")){
       alert("¡Tu, fuera, no te cueles lechon!")
       window.location.href="/";
     }

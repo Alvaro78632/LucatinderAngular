@@ -15,12 +15,13 @@ export class ListamatchComponent implements OnInit {
   listamatch:Contacto[];
   
   ngOnInit(): void {
+    //COMPRUEBA EN EL LOCAL STORAGE QUE EXISTE EL PERFIL ESTA LOGEADO, SINO ES REDIRIGIDO AL LOGIN
     if (!localStorage.getItem("perfilLoggeado")){
       alert("¡Tu, fuera, no te cueles lechon!")
       window.location.href="/";
     }
 
-
+    //PIDE AL SERVICIO CONTACTO LA LISTA DE MATCHES
     this.contactoService.getMatch()
     .subscribe(data => {
       console.log(data);

@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
 
 
 //IMPORTAMOS LOS COMPONENTES NECESARIOS 
-import { ListapoblacionComponent } from './components/listapoblacion/listapoblacion.component';
 import { AltausuarioComponent } from './components/altausuario/altausuario.component';
 import { ListacontactoComponent } from './components/listacontacto/listacontacto.component';
 import { PerfilService } from './service/perfil.service';
@@ -28,7 +27,6 @@ import { FormulariobusquedaComponent } from './components/formulariobusqueda/for
     AppComponent,
     
     ListacontactoComponent,
-    ListapoblacionComponent,
     AltausuarioComponent,
     MenuComponent,
     LoginComponent,
