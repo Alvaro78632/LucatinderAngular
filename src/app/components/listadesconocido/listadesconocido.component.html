@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="card-group">
             <div class="transparente card border border-danger rounded" style="max-width:250px" *ngFor="let perfil of listaDesconocido">
-                <img *ngIf="perfil.genero=='Hombre'" class="card-img-top p-2" src="https://loremflickr.com/300/300/men"
+                <img *ngIf="perfil.genero=='Hombre' || perfil.genero=='hombre'" class="card-img-top p-2" src="https://loremflickr.com/300/300/men"
                 alt="Card image cap">
                 <img *ngIf="perfil.genero=='Mujer'" class="card-img-top p-2" src="https://loremflickr.com/300/300/women" alt="Card image cap">
                 <div class="card-body">
