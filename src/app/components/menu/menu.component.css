@@ -1,4 +1,4 @@
-
+/* Clase que hace fijo el elemento cuando llega a la altura 0 */
 .sticky {
     position: fixed;
     top: 0;
